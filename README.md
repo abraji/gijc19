@@ -4,9 +4,9 @@ Cursos e informações sobre a Global Investigative Journalism  Conference 2019
 ----
 ## Data Hands-On: Python
 
-Speakers:
-Nils Mulvad (Speaker) Responsible Editor, Investigative Reporting Denmark
-Tommy Kaas (Speaker) Editor, Kaas & Mulvad
+Speakers:<br>
+Nils Mulvad (Speaker) Responsible Editor, Investigative Reporting Denmark<br>
+Tommy Kaas (Speaker) Editor, Kaas & Mulvad<br>
 
 Descrição:
 As três sessões de Python são pensadas em um contexto.
@@ -23,9 +23,9 @@ Instale o Python 3.6.8 (ou versão posterior). Você também deve ter baixado e 
 ----
 ## Data Hands-On: The Power of R
 
-Speakers:
-Luuk Sengers (Speaker) Co-founder, Trainer, Story-Based Inquiry Associates
-Jonathan Stoneman (Speaker) Trainer, Freelance
+Speakers:<br>
+Luuk Sengers (Speaker) Co-founder, Trainer, Story-Based Inquiry Associates<br>
+Jonathan Stoneman (Speaker) Trainer, Freelance<br>
 Robert Gebeloff (Speaker) Data Projects Editor, The New York Times
 
 Descrição:
