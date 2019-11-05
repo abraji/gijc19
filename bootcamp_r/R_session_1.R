@@ -26,7 +26,7 @@ Pollution %>%  count(CountryName, sort = TRUE)
 
 # Mostrar todas as instalações no meu país
 Total <- Pollution %>%
-  filter(CountryName == "France")
+  filter(CountryName == "Germany")
 
 
 # Mostrar todas as instalações no meu país em 2017
@@ -46,7 +46,7 @@ NameCity <- Livestock17 %>%
 
 # Mostrar todas as instalações em meu país que emitem NOx (nitrogênio), com nomes e quantidades
 NOX17 <- Pollution %>%
-  filter(CountryName == "France", ReportingYear == "2017", str_detect(PollutantName, "NOx")) %>%
+  filter(CountryName == "Germany", ReportingYear == "2017", str_detect(PollutantName, "NOx")) %>%
   select(FacilityName,TotalQuantity)
 
 
@@ -76,7 +76,6 @@ write_csv(Total17, "Polluters.csv")
 
 # Exportar tabela para xlsx
 write_xlsx(Total17, "Polluters.xlsx")
-
 
 
 # Ver tabela “Total17”
@@ -173,7 +172,7 @@ CO2Facilities <- Joined2 %>%
 
 # Qual setor é o maior poluidor de CO2 do seu país em 2017?
 CO2Sectors <- Joined2 %>%
-  filter(PollutantName == "Carbon dioxide (CO2)", ReportingYear == "2017", CountryName.x == "MyCountry") %>%
+  filter(PollutantName == "Carbon dioxide (CO2)", ReportingYear == "2017", CountryName.x == "Germany") %>%
   group_by(MainIASectorName) %>%
   summarise(TotalQuantity=sum(TotalQuantity, na.rm=TRUE)) %>%
   arrange(desc(TotalQuantity))
@@ -214,21 +213,22 @@ FarmsTrend <- Joined2 %>%
 
 
 # Poluição de CO2 em MyCountry por setor
-ggplot(data = CO2Sectors, aes(x = reorder(MainIASectorName, -Total), y = Total, fill = MainIASectorName)) + 
+ggplot(data = CO2Sectors, aes(x = reorder(MainIASectorName, -TotalQuantity), y = TotalQuantity, fill = MainIASectorName)) + 
   geom_bar(colour = "black", fill = "blue", width = 1, stat = "identity") +
   xlab("Sectors") + ylab("CO2 pollution") +
   ggtitle("CO2 emission per sector in my country")
 
 
-ggplot(data = CO2Sectors, aes(x = reorder(MainIASectorName, -Total), y = Total, fill = MainIASectorName)) + 
+ggplot(data = CO2Sectors, aes(x = reorder(MainIASectorName, -TotalQuantity), y = TotalQuantity, fill = MainIASectorName)) +
   geom_bar(colour = "black", fill = "blue", width = 1, stat = "identity") +
   coord_flip() +
-  xlab("Sectors") + ylab("CO2 pollution") +
-  ggtitle("CO2 emission per sector in my country”)
+  xlab("Sectors") +
+  ylab("CO2 pollution") +
+  ggtitle("CO2 emission per sector in my country")
 
 
 
-ggplot(FarmsTrend, aes(x = ReportingYear, y = Total)) + 
+ggplot(FarmsTrend, aes(x = ReportingYear, y = TotalQuantity)) + 
 geom_line(color="red") +
 geom_point() +
 xlab("Year") + 
@@ -241,12 +241,79 @@ ggtitle("Ammonia emission from farms")
 ggplot(Schools, aes(x = ReadScore, y = LowIncomePct)) +
 geom_point() +
 geom_smooth(method = lm, color = "red", se = FALSE) +
-xlab(“Pontuações de leitura") + ylab(“Renda dos pais") +
+xlab("Pontuações de leitura") + ylab('Renda dos pais') +
 ggtitle("Correlação entre escores de leitura e renda dos pais")
 
 
 # Com o uso do Esquisse
 install.packages("esquisse")
 esquisse::esquisser(CO2Sectors)
+
+
+# Verifique o tipo de dados
+glimpse(Joined2)
+
+
+# Alterar tipo de dados
+Joined2$TotalQuantity <- as.numeric(Joined2$TotalQuantity) 
+
+# Remover notações científicas 
+options(scipen = 999)
+
+
+# Arredondar para decimais
+Joined2$TotalQuantity <- round(Joined2$TotalQuantity, 1)
+
+
+
+
+# Primeiro: Importe a tabela ‘Journalists’ into R
+library(readxl)
+Journalists <- read_excel("T4J_session_data/Journalists.xlsx")
+View(Journalists)
+
+
+# Dividir células com valores múltiplos em colunas separadas
+Journalists <- separate(Journalists, Medium, into = c("Medium1", "Medium2"), sep = ",")
+
+
+# Dividir Jobs 
+Journalists <- separate(Journalists, Job, into = c("FirstJob", "SecondJob", "ThirdJob"), sep = ",")
+
+
+install.packages("lubridate")
+library(lubridate)
+
+# Criar coluna para data com nova formatação
+Journalists <- Journalists %>%
+  mutate(newdate = mdy(Date))
+
+# Criar coluna para ano
+Journalists <- Journalists %>%
+  mutate(year = year(newdate))
+
+# Unir valores de várias colunas em uma coluna
+Journalists <- unite(Journalists, Medium, Medium1, Medium2, sep = ", ")
+
+
+# Remova NA (not available) ou espaços em branco
+Journalists <- Journalists %>%
+  drop_na(Nationality)
+
+
+# Remova duplicadas
+Journalists <- Journalists[!duplicated(Journalists), ]
+
+
+# Remova espaços à esquerda e à direita
+Journalists $Name <- str_trim(Journalists$Name)
+
+# Alterar maiúsculas e minúsculas
+Journalists$Name <- str_to_title(Journalists$Name, locale = "en")
+
+
+# Substituir correspondências de uma string
+Journalists$Organization <- gsub("Freelancer", "Freelance", Journalists$Organization, ignore.case=TRUE)
+
 
 
