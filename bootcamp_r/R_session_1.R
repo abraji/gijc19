@@ -4,6 +4,8 @@
 # Jonathan Stoneman (Speaker) Trainer, Freelance 
 # Robert Gebeloff (Speaker) Data Projects Editor, The New York Times 
 
+# Os arquivos de dados estão em: http://bit.ly/Tidyverse_training 
+
 # Instalar pacotes
 install.packages("tidyverse")
 install.packages("writexl")
