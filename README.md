@@ -1,6 +1,7 @@
 # gijc19
 Cursos e informações sobre a Global Investigative Journalism  Conference 2019
 
+----
 ## Data Hands-On: Python
 
 Speakers:
@@ -19,8 +20,7 @@ Python 3. Usamos o módulo BeautifulSoup para extrair dados não estruturados da
 
 Instale o Python 3.6.8 (ou versão posterior). Você também deve ter baixado e instalado as seguintes bibliotecas (também conhecidas como pacotes): requests, bs4 e jupyter notebook
 
-
-
+----
 ## Data Hands-On: The Power of R
 
 Speakers:
