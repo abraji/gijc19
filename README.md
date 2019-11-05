@@ -36,7 +36,7 @@ Os treinadores de jornalismo de dados Luuk Sengers e Jonathan Stoneman estiveram
 Nesta série de sessões, eles ajudarão você a passar pela parte mais difícil do R: introdução.
 Ao final das sessões, você saberá por que R é um recurso tão importante (e gratuito). Você poderá usar o RStudio para obter, importar, arrumar e analisar seus dados e visualizá-los.
 
-Usaremos o R and R Studio; portanto, instale-o com antecedência. (Software para [download](https://www.dropbox.com/sh/1ufx1h9hnj64t45/AADaYmsEtt7XbD7H7nNJf5Rda?dl=0) gratuito) 
+Usaremos o R and R Studio; portanto, instale-o com antecedência. 
 
 R1- Introdução. Por que R, apresenta vários conceitos-chave, RStudio, pacotes e gráficos simples
 
@@ -44,4 +44,4 @@ R2 - O tidyverse. Como usar pacotes R prontos para ajudá-lo a criar um fluxo de
 
 R3 - Conhecendo a visualização em R. A sessão termina com uma análise de como avançar ainda mais em R, fontes de treinamento, conselhos e leitura.
 
-### A aula foi escrita por Luuk Sengers e Jonathan Stoneman e pode ser acessada traduzida para o português aqui: https://drive.google.com/file/d/12jwnKdiK3C8YtAajG6zIO9XcHXO6BBZj/view?usp=sharing
+### A aula foi escrita por Luuk Sengers e Jonathan Stoneman e pode ser acessada traduzida para o português [aqui](https://drive.google.com/file/d/12jwnKdiK3C8YtAajG6zIO9XcHXO6BBZj/view?usp=sharing)
