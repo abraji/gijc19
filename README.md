@@ -36,7 +36,7 @@ Os treinadores de jornalismo de dados Luuk Sengers e Jonathan Stoneman estiveram
 Nesta série de sessões, eles ajudarão você a passar pela parte mais difícil do R: introdução.
 Ao final das sessões, você saberá por que R é um recurso tão importante (e gratuito). Você poderá usar o RStudio para obter, importar, arrumar e analisar seus dados e visualizá-los.
 
-Usaremos o R and R Studio; portanto, instale-o com antecedência. (Software para download gratuito) https://www.dropbox.com/sh/1ufx1h9hnj64t45/AADaYmsEtt7XbD7H7nNJf5Rda?dl=0
+Usaremos o R and R Studio; portanto, instale-o com antecedência. (Software para [download](https://www.dropbox.com/sh/1ufx1h9hnj64t45/AADaYmsEtt7XbD7H7nNJf5Rda?dl=0) gratuito) 
 
 R1- Introdução. Por que R, apresenta vários conceitos-chave, RStudio, pacotes e gráficos simples
 
