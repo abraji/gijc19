@@ -1,5 +1,6 @@
 # gijc19
-Cursos e informações sobre a Global Investigative Journalism Conference [2019](https://gijc2019.org/)
+Cursos e informações sobre a Global Investigative Journalism Conference [2019](https://gijc2019.org/)<br>
+Veja mais sobre [aqui](https://www.abraji.org.br/help-desk/dicas-da-abraji-sobre-a-gijc-conferencia-global-de-jornalismo-investigativo)
 
 ----
 ## Data Hands-On: Python
