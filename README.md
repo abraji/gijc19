@@ -1,5 +1,5 @@
 # gijc19
-Cursos e informações sobre a Global Investigative Journalism  Conference 2019
+Cursos e informações sobre a Global Investigative Journalism Conference [2019](https://gijc2019.org/)
 
 ----
 ## Data Hands-On: Python
@@ -18,7 +18,8 @@ Python 2. Usamos o módulo de requests para extrair dados estruturados da web.
 
 Python 3. Usamos o módulo BeautifulSoup para extrair dados não estruturados da web.
 
-Instale o Python 3.6.8 (ou versão posterior). Você também deve ter baixado e instalado as seguintes bibliotecas (também conhecidas como pacotes): requests, bs4 e jupyter notebook
+Instale o [Python 3.6.8](https://www.python.org/)
+ (ou versão posterior). Você também deve ter baixado e instalado as seguintes bibliotecas (também conhecidas como pacotes): requests, bs4 e jupyter notebook
 
 ----
 ## Data Hands-On: The Power of R
@@ -36,7 +37,7 @@ Os treinadores de jornalismo de dados Luuk Sengers e Jonathan Stoneman estiveram
 Nesta série de sessões, eles ajudarão você a passar pela parte mais difícil do R: introdução.
 Ao final das sessões, você saberá por que R é um recurso tão importante (e gratuito). Você poderá usar o RStudio para obter, importar, arrumar e analisar seus dados e visualizá-los.
 
-Usaremos o R and R Studio; portanto, instale-o com antecedência. 
+Usaremos o [R](https://www.r-project.org/) e o [R Studio](https://rstudio.com/); portanto, instale-o com antecedência. 
 
 R1- Introdução. Por que R, apresenta vários conceitos-chave, RStudio, pacotes e gráficos simples
 
