@@ -46,4 +46,4 @@ R2 - O tidyverse. Como usar pacotes R prontos para ajudá-lo a criar um fluxo de
 
 R3 - Conhecendo a visualização em R. A sessão termina com uma análise de como avançar ainda mais em R, fontes de treinamento, conselhos e leitura.
 
-### A aula foi escrita por Luuk Sengers e Jonathan Stoneman e pode ser acessada traduzida para o português [aqui](https://drive.google.com/file/d/12jwnKdiK3C8YtAajG6zIO9XcHXO6BBZj/view?usp=sharing)
+### A aula foi escrita por Luuk Sengers e Jonathan Stoneman e pode ser acessada traduzida para o português [aqui](https://drive.google.com/file/d/1HIX2nHbuEWWc40DSmcGRrxvyw0iwn-xc/view?usp=sharing)
